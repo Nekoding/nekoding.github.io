@@ -1,4 +1,5 @@
 import { loadPage } from './_loadPage'
+import M from 'materialize'
 
 const loadNavigation = () => {
   const xmlHttpRequest = new XMLHttpRequest()
@@ -16,6 +17,9 @@ const loadNavigation = () => {
       document.querySelectorAll('.sidenav a, .topnav a')
         .forEach(element => {
           element.addEventListener('click', event => {
+            const sidenav = document.querySelector(".sidenav");
+            M.Sidenav.getInstance(sidenav).close();
+
             const page = event.target.getAttribute('href')
             loadPage(page)
           })
