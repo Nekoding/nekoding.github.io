@@ -6,7 +6,7 @@ const loadSaved = () => {
     .then(teams => {
       const content = document.querySelector('#main-content')
       teams.forEach(team => {
-        content.innerHTML += createList(team)
+        content.innerHTML += createList(team, '#saved')
       })
     })
     .catch(() => console.error('error saat mengambil data dari db'))

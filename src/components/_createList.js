@@ -1,4 +1,4 @@
-const createList = data => {
+const createList = (data, param = '') => {
   const html =
     `<ul class="collection">
         <li class="collection-item avatar">
@@ -7,7 +7,7 @@ const createList = data => {
             <p>Address : ${data.address}</p>
             <p>Website : ${data.website}</p>
             <p>Venue : ${data.venue}</p>
-            <a href="teams.html?id=${data.id}">Details</a>
+            <a href="teams.html?id=${data.id}${param}">Details</a>
         </li>
     </ul>`
 
