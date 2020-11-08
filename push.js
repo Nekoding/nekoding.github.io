@@ -20,7 +20,7 @@ const pushSubscription = {
   }
 }
 
-const payload = 'Selamat! Aplikasi Anda sudah dapat menerima push notifikasi!';
+const payload = 'Test kirim notif!';
 
 const options = {
   gcmAPIKey: '810474948980',
