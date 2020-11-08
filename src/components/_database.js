@@ -1,4 +1,5 @@
 import { openDB } from 'idb'
+import M from 'materialize'
 
 const VERSION = 1
 
@@ -20,10 +21,15 @@ const saved = dataTeam => {
     .then(db => {
       const tx = db.transaction('data_team', 'readwrite')
       const store = tx.objectStore('data_team')
-      store.add(dataTeam, 'team-' + dataTeam.id)
-      console.log('berhasil disimpan')
-      return tx.complete
-    }).catch(() => console.error('Terjadi kesalahan saat menyimpan data'))
+      return store.add(dataTeam, 'team-' + dataTeam.id)
+    })
+    .then(status => {
+      if (status) {
+        M.toast({html: 'Data berhasil disimpan'})
+      }
+    })
+    .catch(() =>  M.toast({html: 'Data yang sama sudah ada di dalam database'}))
+
 }
 
 const getAlldata = () => {
@@ -52,4 +58,17 @@ const getDataById = id => {
   })
 }
 
-export { saved, getAlldata, getDataById }
+const deleteData = id => {
+  return new Promise(((resolve, reject) => {
+    dbPromised()
+      .then(db => {
+        const tx = db.transaction('data_team', 'readwrite')
+        const store = tx.objectStore('data_team')
+        return store.delete(`team-${id}`)
+      })
+      .then(data => resolve(data))
+      .catch(err => reject(new Error(err)))
+  }))
+}
+
+export { saved, getAlldata, getDataById, deleteData }

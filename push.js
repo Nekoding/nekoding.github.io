@@ -13,10 +13,10 @@ webPush.setVapidDetails(
 )
 
 const pushSubscription = {
-  "endpoint": "https://fcm.googleapis.com/fcm/send/e4iaaWhYkcI:APA91bFHsLDZIysuAbAZLe_czVWvOKYpnFBX0iZxvjRsODvBVRqUEz8YJB6KqQn_KWhLLtetW2VmKh0mQEXt3CVnfiCXAb96G2I05A7BA-RwWX4GskMctRrVhsHu6KmFyPzq3-YJAhVW",
+  "endpoint": "https://fcm.googleapis.com/fcm/send/fdoqQY-eCpE:APA91bHl6CJl-LRaDDcKaM5FpazHCGYCiB14swQpnQ3ZU2w1ZLJWB9bQtmpZtLYJVmlyC3CR73b_6kokkQWYGydAXLbLERESFSJR0k-DWqVkib2d-jftdV7pJVR2Tm1gNlBKkTlqxwq1",
   "keys": {
-    "p256dh": "BH/bW7wfODVoulKzuQCLOU2Q3g1eTeCnNqM18L9BUoI7txX8itrrIfZFLzoTYJyk/1bRTrNElpPoZFhhB9hQocw=",
-    "auth": "DRJBeT9cTlWj2UShHawQyA=="
+    "p256dh": "BBGC/DbbJFpQy07m5Wz6uERkiPjvGtaT+/1TSW/Z2KHwciC0xIFoLiGuoZ2FoB2tW0iE4Vy6K7xyQ9iHZMdN6uI=",
+    "auth": "RQkfjzqVEhnGjpwfWX5GHA=="
   }
 }
 
@@ -31,4 +31,4 @@ webPush.sendNotification(
   pushSubscription,
   payload,
   options
-);
+)

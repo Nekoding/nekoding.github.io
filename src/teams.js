@@ -18,7 +18,9 @@ if (isFromFavorite) {
 
 saveButton.onclick = () => {
   loadTeamInfo(idTeams)
-    .then(data => saved(data))
+    .then(data => {
+      saved(data)
+    })
     .catch(err => console.error(err))
 }
 
