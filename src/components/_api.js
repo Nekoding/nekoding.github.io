@@ -1,10 +1,10 @@
-const BASE_URL = ''
-const API_TOKEN = ''
+const BASE_URL = 'https://api.football-data.org/v2/'
+const API_TOKEN = '61ce6832498046a1959ee87aad74d8d2'
 
-const requestData = async (url = null) => {
+const requestData = async (url = 'competitions') => {
   const result = await fetch(BASE_URL + url, {
     headers: {
-      'Api-Auth-Token': API_TOKEN
+      'X-Auth-Token': API_TOKEN
     }
   })
   return await result.json()
