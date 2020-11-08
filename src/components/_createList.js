@@ -8,6 +8,8 @@ const createList = (data, param = '') => {
             <p>Website : ${data.website}</p>
             <p>Venue : ${data.venue}</p>
             <a href="teams.html?id=${data.id}${param}">Details</a>
+            
+            ${ (param !== '') ? '<a href="delete?id=' + data.id +'" class="secondary-content red-darken-100"><i class="material-icons">delete</i></a>' : '' } 
         </li>
     </ul>`
 

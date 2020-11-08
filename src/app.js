@@ -2,6 +2,7 @@ import { loadNavigation } from './components/_loadNavigation'
 import M from 'materialize'
 import { loadPage } from './components/_loadPage'
 import { swRegister } from './components/_swRegister'
+import { notifRegister } from './components/_notifRegister'
 
 const elements = document.querySelectorAll('.sidenav')
 M.Sidenav.init(elements)
@@ -15,3 +16,4 @@ if (['', 'home'].includes(currentPage)) {
 }
 
 swRegister()
+notifRegister()

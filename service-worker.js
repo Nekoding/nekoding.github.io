@@ -89,3 +89,27 @@ self.addEventListener('fetch', event => {
       .catch(err => console.error(err))
   )
 })
+
+self.addEventListener('push', event => {
+  let body = ''
+
+  if (event.data) {
+    body = event.data.text()
+  } else {
+    body = 'Push message no payload'
+  }
+
+  const options = {
+    body: body,
+    icon: 'assets/icons/favicon-32x32.png',
+    vibrate: [100, 50, 100],
+    data: {
+      dateOfArival: Date.now(),
+      primaryKey: 1
+    }
+  }
+
+  event.waitUntil(
+    self.registration.showNotification('Push notifications', options)
+  )
+})
