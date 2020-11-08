@@ -23,3 +23,9 @@ nav i.material-icons , .sidenav li>a i.material-icons{
     display: block;
     text-align: center;
 }
+
+#preloader {
+    display: block;
+    text-align: center;
+    margin-top: 3rem;
+}
