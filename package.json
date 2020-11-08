@@ -23,6 +23,7 @@
     "webpack-cli": "^4.2.0"
   },
   "dependencies": {
-    "idb": "^5.0.7"
+    "idb": "^5.0.7",
+    "live-server": "^1.2.1"
   }
 }

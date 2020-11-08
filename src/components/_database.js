@@ -27,7 +27,7 @@ const saved = dataTeam => {
 }
 
 const getAlldata = () => {
-  return new Promise(((resolve, reject) => {
+  return new Promise((resolve, reject) => {
     dbPromised()
       .then(db => {
         const tx = db.transaction('data_team', 'readonly')
@@ -36,7 +36,20 @@ const getAlldata = () => {
       })
       .then(data => resolve(data))
       .catch(() => console.error('Terjadi kesalahan saat mengambil data'))
-  }))
+  })
 }
 
-export { saved, getAlldata }
+const getDataById = id => {
+  return new Promise((resolve, reject) => {
+    dbPromised()
+      .then(db => {
+        const tx = db.transaction('data_team', 'readonly')
+        const store = tx.objectStore('data_team')
+        return store.get(`team-${id}`)
+      })
+      .then(data => resolve(data))
+      .catch(() => reject(new Error('Data tidak ditemukan')))
+  })
+}
+
+export { saved, getAlldata, getDataById }
