@@ -1,6 +1,5 @@
 const CACHE_NAME = 'infobola'
 const fileToCache = [
-  'assets/css/materialize.min.css',
   'assets/css/style.css',
   'assets/icons/apple-icon-57x57.png',
   'assets/icons/apple-icon-60x60.png',
@@ -35,7 +34,9 @@ const fileToCache = [
   'partials/navigation.html',
   'index.html',
   'teams.html',
-  'manifest.json'
+  'manifest.json',
+  'https://fonts.gstatic.com/s/materialicons/v67/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2',
+  'https://fonts.googleapis.com/icon?family=Material+Icons'
 ]
 
 self.addEventListener('install', event => {
