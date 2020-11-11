@@ -1,5 +1,6 @@
 const CACHE_NAME = 'infobola'
 const fileToCache = [
+  '/',
   'assets/css/style.css',
   'assets/icons/apple-icon-57x57.png',
   'assets/icons/apple-icon-60x60.png',
