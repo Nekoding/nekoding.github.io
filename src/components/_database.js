@@ -21,7 +21,7 @@ const saved = dataTeam => {
     .then(db => {
       const tx = db.transaction('data_team', 'readwrite')
       const store = tx.objectStore('data_team')
-      return store.add(dataTeam, 'team-' + dataTeam.id)
+      return store.put(dataTeam, 'team-' + dataTeam.id)
     })
     .then(status => {
       if (status) {

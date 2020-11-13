@@ -2,6 +2,7 @@ const CACHE_NAME = 'infobola'
 const fileToCache = [
   '/',
   'assets/css/style.css',
+  'https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js',
   'assets/icons/apple-icon-57x57.png',
   'assets/icons/apple-icon-60x60.png',
   'assets/icons/apple-icon-72x72.png',
