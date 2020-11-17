@@ -2,7 +2,7 @@ const swRegister = () => {
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
       navigator.serviceWorker
-        .register('service-worker.js', { scope: '/' })
+        .register('sw.js', { scope: '/' })
         .then(() => console.info('service worker berhasil diinstal'))
         .catch(err => console.error(err))
     })
