@@ -1,0 +1,31 @@
+nav i.material-icons , .sidenav li>a i.material-icons{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.menu-icons {
+    display: flex;
+}
+
+.red-darken-100 , .sidenav li>a>i.material-icons{
+    color: #af2d2d;
+}
+
+.blue-grey-100 {
+    background-color: #214252;
+}
+
+.collection-item a{
+    display: flex;
+}
+
+.center {
+    display: block;
+    text-align: center;
+}
+
+#preloader {
+    display: block;
+    text-align: center;
+    margin-top: 3rem;
+}
