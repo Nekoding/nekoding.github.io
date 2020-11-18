@@ -25,7 +25,8 @@ module.exports = {
           return entry
         })
         return { manifest }
-      }]
+      }],
+      exclude: ['sw.js']
     })
   ],
   externals: {
